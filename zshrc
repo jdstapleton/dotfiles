@@ -6,8 +6,8 @@ ZSH_CUSTOM=~/src/github.com/rricard/dotfiles/custom
 
 plugins=(atom bower brew brew-cask bundler coffee colored-man colorize
   command-aliases gem git git-extras git-flow github go golang heroku
-  lein node npm osx postgres python rails rake rbenv redis-cli ruby
-  sbt scala sudo tmux vagrant xcode)
+  last-working-dir lein node npm osx postgres python rails rake rbenv redis-cli ruby
+  sbt scala sudo vagrant xcode)
 
 source $ZSH/oh-my-zsh.sh
 
