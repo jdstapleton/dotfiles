@@ -2,12 +2,12 @@ export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="agnoster"
 
-ZSH_CUSTOM=~/src/github.com/rricard/dotfiles/custom
+ZSH_CUSTOM=~/src/github.com/rricard/dotfiles/custom/
 
 plugins=(atom bower brew brew-cask bundler coffee colored-man colorize
   command-aliases gem git git-extras git-flow github go golang heroku
   last-working-dir lein node npm osx postgres python rails rake rbenv redis-cli ruby
-  sbt scala sudo vagrant xcode)
+  sbt scala sudo vagrant xcode zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
