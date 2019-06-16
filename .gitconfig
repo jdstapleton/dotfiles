@@ -1,0 +1,44 @@
+[user]
+    name = James Stapleton
+    email = github@jamesstapleton.com
+[core]
+    excludesfile = ~/.gitignore_global
+[push]
+    default = simple
+[color]
+    ui = auto
+[alias]
+    co = checkout
+    ci = commit
+    submit = commit
+    st = status
+    who = shortlog -s --
+    incoming = log HEAD..origin/dev
+    last = log -1 HEAD
+    unstash = stash pop
+    pull = pull --ff-only
+    lg0 = log --color --pretty=format:'%Cred%h%Creset - %Cgreen(%cr) %Creset %s%C(yellow)%d %C(bold blue)<%an>%Creset' --abbrev-commit
+    lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+    lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+    lg = !"git lg0"
+    pullff = pull --ff-only
+    noff = merge --no-ff
+    fa = fetch --all
+    dc = diff --cached
+    di = diff
+    aa = add --all
+    amend = commit --amend
+    ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
+    gi = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
+    
+[pull]
+    rebase = true
+[credential]
+    helper = osxkeychain
+[rebase]
+	instructionFormat = (%an) %s
+[merge]
+   tool = intellij
+[mergetool "intellij"]
+   cmd = idea merge $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE") $(cd $(dirname "$BASE") && pwd)/$(basename "$BASE") $(cd $(dirname "$MERGED") && pwd)/$(basename "$MERGED")
+   trustExitCode = true
